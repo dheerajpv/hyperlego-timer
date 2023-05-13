@@ -9,20 +9,39 @@ body {
     margin: 0px;
 }
 
-#timer {
-    font-size: 4rem;
+#timer.good {
+    --timer-color: green;
 }
 
-#timer.good {
-    color: green;
+#timer.good::after {
+    content: url("/assets/svg/play_circle.svg");
 }
 
 #timer.warn {
-    color: #ddd30e;
+    --timer-color: #ddd30e;
+}
+
+#timer.warn::after {
+    content: url("/assets/svg/hourglass_bottom.svg");
 }
 
 #timer.stop {
-    color: red;
+    --timer-color: red;
+}
+
+#timer.stop::after {
+    content: url("/assets/svg/stop_circle.svg");
+}
+
+#timer {
+    font-size: 4rem;
+    color: var(--timer-color);
+}
+
+#timer::after {
+    margin-left: 2rem;
+    stroke: var(--timer-color);
+    fill: var(--timer-color);
 }
 
 .timer-bottom,

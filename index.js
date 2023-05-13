@@ -47,8 +47,8 @@ function update() {
     timer.textContent = `${min}:${sec}`;
 
     timer.className = "";
-    if (remaining > 30) timer.classList.add("good");
-    else if (remaining > 0) {
+    if (remaining > 30 && timerInterval !== null) timer.classList.add("good");
+    else if (remaining > 0 && timerInterval !== null) {
         timer.classList.add("warn");
         if (!playedWarn) {
             warnAudio.play();
