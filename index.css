@@ -4,8 +4,9 @@
 }
 
 body {
-    /* height: 100dvh; */
+    min-height: 100vh;
     box-sizing: border-box;
+    margin: 0px;
 }
 
 #timer {
@@ -34,11 +35,12 @@ body {
 .timer-bottom {
     justify-content: space-around;
     position: relative;
-    bottom: 0;
+    top: calc(100vh - 9rem);
 }
 
 .timer-control {
     justify-content: center;
+    min-height: 4rem;
 }
 
 .timer-control > button {
@@ -63,7 +65,7 @@ body {
 }
 
 #timer-pause {
-    background-color: gray;
+    background-color: #7b5959;
 }
 
 #timer-resume {
