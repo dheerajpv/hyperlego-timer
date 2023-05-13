@@ -14,7 +14,7 @@ body {
 }
 
 #timer.good::after {
-    content: url("/assets/svg/play_circle.svg");
+    content: url("./assets/svg/play_circle.svg");
 }
 
 #timer.warn {
@@ -22,7 +22,7 @@ body {
 }
 
 #timer.warn::after {
-    content: url("/assets/svg/hourglass_bottom.svg");
+    content: url("./assets/svg/hourglass_bottom.svg");
 }
 
 #timer.stop {
@@ -30,7 +30,7 @@ body {
 }
 
 #timer.stop::after {
-    content: url("/assets/svg/stop_circle.svg");
+    content: url("./assets/svg/stop_circle.svg");
 }
 
 #timer {

@@ -8,10 +8,10 @@ const reset = document.querySelector("#timer-reset");
 start.enabled = false;
 reset.enabled = false;
 
-const startAudio = new Audio("/assets/audio/CHARGE.wav");
-const warnAudio = new Audio("/assets/audio/TimeToRun.wav");
-const endAudio = new Audio("/assets/audio/BUZZER.wav");
-const errorAudio = new Audio("/assets/audio/FOGHORN.wav");
+const startAudio = new Audio("./assets/audio/CHARGE.wav");
+const warnAudio = new Audio("./assets/audio/TimeToRun.wav");
+const endAudio = new Audio("./assets/audio/BUZZER.wav");
+const errorAudio = new Audio("./assets/audio/FOGHORN.wav");
 
 await Promise.all(
     [startAudio, warnAudio, endAudio, errorAudio].map(
