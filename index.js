@@ -41,7 +41,7 @@ function interval() {
     update();
 }
 
-function update() {
+function update(silent = false) {
     const min = Math.floor(remaining / 60);
     const sec = `${remaining % 60}`.padStart(2, "0");
     timer.textContent = `${min}:${sec}`;
@@ -51,12 +51,14 @@ function update() {
     else if (remaining > 0 && timerInterval !== null) {
         timer.classList.add("warn");
         if (!playedWarn) {
-            warnAudio.play();
-            playedWarn = true;
+            if (!silent) {
+                warnAudio.play();
+                playedWarn = true;
+            }
         }
     } else {
         timer.classList.add("stop");
-        endAudio.play();
+        if (!silent) endAudio.play();
     }
 }
 
@@ -95,5 +97,5 @@ reset.addEventListener("click", () => {
     start.disabled = false;
     pause.disabled = true;
     resume.disabled = true;
-    update();
+    update(true);
 });
