@@ -54,7 +54,7 @@ body {
 .timer-bottom {
     justify-content: space-around;
     position: relative;
-    top: calc(100vh - 9rem);
+    top: calc(100vh - 23rem);
 }
 
 .timer-control {
